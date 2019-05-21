@@ -46,7 +46,7 @@ def first_paragraph_links(page):
     soup=get_wiki_soup(get_url(page))
     content=soup.find("div",id="mw-content-text")
     paragraphs=content.find_all("p")
-    paragraph1=paragraphs[0]
+    paragraph1=paragraphs[2]
 
     #If the first paragraph is just numbers, use the second paragraph(which doesn't seem to work for some reason)
     firstlink = paragraph1.find("a")
